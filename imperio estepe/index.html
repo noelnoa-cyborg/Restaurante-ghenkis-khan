@@ -7,15 +7,53 @@
   <!-- Bootstrap 5 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <style>
+    /* Cores oficiais da bandeira da Mongólia */
+    .flag-red { color: #DA2032 !important; }
+    .flag-blue { color: #0066B3 !important; }
+    .flag-yellow { color: #FFD700 !important; }
+
+    .navbar-brand span,
+    .carousel-caption h2.flag-yellow {
+      color: #FFD700 !important;
+    }
+
+    h2.text-danger, .card-title.text-danger {
+      color: #DA2032 !important;
+    }
+    h2.text-primary, h3.text-primary, h5.text-primary {
+      color: #0066B3 !important;
+    }
+
+    .btn-danger {
+      background-color: #DA2032 !important;
+      border-color: #DA2032 !important;
+    }
+
+    /* Botões sociais circulares */
+    .social-btn {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      border-radius: 50%;
+      transition: opacity 0.2s;
+    }
+    .social-btn:hover {
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body class="bg-white text-dark">
 
-  <!-- ========== NAVBAR FIXA (azul com vinho) ========== -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" style="background: linear-gradient(90deg, #0d47a1, #722f37);">
+  <!-- ========== NAVBAR: metade vermelho, metade azul ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" style="background: linear-gradient(to right, #DA2032 50%, #0066B3 50%);">
     <div class="container">
       <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
         <img src="https://flagcdn.com/w40/mn.png" alt="Bandeira da Mongólia" width="36" height="24" class="me-2 rounded-1 border border-light">
-        <span class="text-warning">Império Estepes</span>
+        <span class="flag-yellow">Império Estepes</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
@@ -35,7 +73,7 @@
 
   <div class="pt-5 mt-4"></div>
 
-  <!-- ========== CARROSSEL MONGÓLIA ========== -->
+  <!-- ========== CARROSSEL ========== -->
   <header id="home" class="container-fluid px-0">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -47,21 +85,21 @@
         <div class="carousel-item active">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/%D0%A7%D0%B8%D0%BD%D0%B3%D0%B8%D1%81_%D1%85%D0%B0%D0%B0%D0%BD%D1%8B_%D0%BC%D0%BE%D1%80%D1%8C%D1%82_%D1%85%D3%A9%D1%88%D3%A9%D3%A9-1.jpg/1920px-%D0%A7%D0%B8%D0%BD%D0%B3%D0%B8%D1%81_%D1%85%D0%B0%D0%B0%D0%BD%D1%8B_%D0%BC%D0%BE%D1%80%D1%8C%D1%82_%D1%85%D3%A9%D1%88%D3%A9%D3%A9-1.jpg" class="d-block w-100" style="height: 70vh; object-fit: cover;" alt="Estátua de Genghis Khan">
           <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="background: rgba(0,0,0,0.4); top: 0; bottom: 0; left: 0; right: 0;">
-            <h2 class="display-3 fw-bold text-warning">Império Estepes</h2>
+            <h2 class="display-3 fw-bold flag-yellow">Império Estepes</h2>
             <p class="lead text-white">A grandeza da Mongólia em cada sabor</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://media.istockphoto.com/id/856097424/pt/foto/mongolian-woman-in-traditional-outfit.jpg?s=1024x1024&w=is&k=20&c=tXrZew9EbIvMDXCtp2pBAH3loJEyed1eb8ZmSTJNkhc=" class="d-block w-100" style="height: 70vh; object-fit: cover;" alt="Mulher mongol em traje tradicional">
           <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="background: rgba(0,0,0,0.4); top: 0; bottom: 0; left: 0; right: 0;">
-            <h2 class="display-3 fw-bold" style="color: #c49b9b;">Tradição Viva</h2>
+            <h2 class="display-3 fw-bold flag-red">Tradição Viva</h2>
             <p class="lead text-white">A herança cultural milenar em cada detalhe</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/00/0e/3f/the-orkhon-waterfall.jpg?w=900&h=-1&s=1" class="d-block w-100" style="height: 70vh; object-fit: cover;" alt="Cachoeira Orkhon">
           <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="background: rgba(0,0,0,0.4); top: 0; bottom: 0; left: 0; right: 0;">
-            <h2 class="display-3 fw-bold text-success">Natureza Selvagem</h2>
+            <h2 class="display-3 fw-bold flag-blue">Natureza Selvagem</h2>
             <p class="lead text-white">A pureza das águas e dos ingredientes intocados</p>
           </div>
         </div>
@@ -77,8 +115,8 @@
     </div>
   </header>
 
-  <!-- ========== SEÇÃO SOBRE (fundo azul claro) ========== -->
-  <section id="sobre" class="py-5" style="background-color: #e8f0fe;">
+  <!-- ========== SOBRE (azul mais escuro) ========== -->
+  <section id="sobre" class="py-5" style="background-color: #b3cde0;">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
@@ -87,21 +125,21 @@
         <div class="col-lg-6">
           <h2 class="display-5 fw-bold text-primary">Império Estepes</h2>
           <p class="lead text-muted">Uma viagem gastronômica à Mongólia sem sair do lugar.</p>
-          <p class="text-secondary">Inspirados pelas tradições nômades, oferecemos pratos que aquecem a alma. Nossa cozinha celebra o <span class="fw-semibold" style="color: #722f37;">fogo</span>, a <span class="text-success fw-semibold">natureza</span> e a hospitalidade mongol. Cada receita carrega séculos de história, utilizando carnes de qualidade, laticínios artesanais e ervas das estepes.</p>
+          <p class="text-dark">Inspirados pelas tradições nômades, oferecemos pratos que aquecem a alma. Nossa cozinha celebra o <span class="flag-red fw-semibold">fogo</span>, a <span class="text-success fw-semibold">natureza</span> e a hospitalidade mongol. Cada receita carrega séculos de história, utilizando carnes de qualidade, laticínios artesanais e ervas das estepes.</p>
           <div class="d-flex align-items-center mt-3">
             <img src="https://flagcdn.com/w80/mn.png" alt="Bandeira da Mongólia" width="50" class="me-3 border rounded-1">
-            <span class="fw-bold text-primary">Orgulhosamente inspirados no azul do céu eterno e no vinho das estepes.</span>
+            <span class="fw-bold text-primary">Orgulhosamente inspirados no azul do céu eterno e no vermelho do fogo.</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== HISTÓRIA (fundo branco) ========== -->
-  <section id="historia" class="py-5 bg-white">
+  <!-- ========== HISTÓRIA (vermelho mais escuro) ========== -->
+  <section id="historia" class="py-5" style="background-color: #e8b4b4;">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold" style="color: #722f37;">Das Estepes ao Prato</h2>
+        <h2 class="display-5 fw-bold flag-red">Das Estepes ao Prato</h2>
         <p class="lead text-secondary">A história do império que forjou uma das culinárias mais autênticas do mundo</p>
       </div>
       
@@ -119,16 +157,16 @@
 
       <div class="row g-4">
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden" style="background-color: #fdf7f7;">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-white">
             <img src="https://archaeology.org/wp-content/uploads/2015/08/SO15-Artifact-Mongol-Dragon-Xanadu.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Cover de viga de canto com dragão - Xanadu">
             <div class="card-body">
-              <h5 class="card-title fw-bold text-success"><i class="bi bi-dragon me-2" style="color: #722f37;"></i>Artefatos do Império</h5>
+              <h5 class="card-title fw-bold text-success"><i class="bi bi-dragon flag-red me-2"></i>Artefatos do Império</h5>
               <p class="card-text text-muted">Este cover de viga de canto com dragão, encontrado em Xanadu, revela o esplendor artístico mongol. A fusão entre funcionalidade e beleza também se reflete nos utensílios culinários que resistem ao tempo.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden" style="background-color: #fdf7f7;">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden bg-white">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Boortsog_Aaruul.JPG/1920px-Boortsog_Aaruul.JPG" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Boortsog e Aaruul - comida mongol">
             <div class="card-body">
               <h5 class="card-title fw-bold text-success"><i class="bi bi-egg-fried text-warning me-2"></i>Sabores que Cruzaram Impérios</h5>
@@ -140,11 +178,11 @@
     </div>
   </section>
 
-  <!-- ========== CARDÁPIO (fundo azul bem claro) ========== -->
-  <section id="cardapio" class="py-5" style="background-color: #e8f0fe;">
+  <!-- ========== CARDÁPIO (azul escuro) ========== -->
+  <section id="cardapio" class="py-5" style="background-color: #b3cde0;">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold" style="color: #722f37;">Nossos Sabores</h2>
+        <h2 class="display-5 fw-bold flag-red">Nossos Sabores</h2>
         <p class="lead text-secondary">Pratos autênticos com ingredientes selecionados</p>
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -219,35 +257,35 @@
     </div>
   </section>
 
-  <!-- ========== DIFERENCIAIS (gradiente azul + vinho claro) ========== -->
-  <section id="diferenciais" class="py-5" style="background: linear-gradient(135deg, #d4e1f5, #f5e8ea);">
+  <!-- ========== DIFERENCIAIS (vermelho esquerda, azul direita) ========== -->
+  <section id="diferenciais" class="py-5" style="background: linear-gradient(to right, #e8b4b4 50%, #b3cde0 50%);">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="display-5 fw-bold text-success">O Espírito da Estepe</h2>
-        <p class="lead text-secondary">Por que viver a experiência Império Estepes?</p>
+        <p class="lead text-dark">Por que viver a experiência Império Estepes?</p>
       </div>
       <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
-        <div class="col"><div class="bg-white p-4 rounded-4 shadow-sm h-100"><i class="bi bi-fire display-4" style="color: #722f37;"></i><h4 class="mt-3 text-primary">Cozinha de Fogo</h4><p class="text-muted">Técnicas ancestrais de cocção, preservando o sabor original.</p></div></div>
+        <div class="col"><div class="bg-white p-4 rounded-4 shadow-sm h-100"><i class="bi bi-fire display-4 flag-red"></i><h4 class="mt-3 text-primary">Cozinha de Fogo</h4><p class="text-muted">Técnicas ancestrais de cocção, preservando o sabor original.</p></div></div>
         <div class="col"><div class="bg-white p-4 rounded-4 shadow-sm h-100"><i class="bi bi-globe-asia-australia display-4 text-success"></i><h4 class="mt-3 text-primary">Ingredientes da Mongólia</h4><p class="text-muted">Ervas, carnes e laticínios das pastagens infinitas.</p></div></div>
         <div class="col"><div class="bg-white p-4 rounded-4 shadow-sm h-100"><i class="bi bi-people-fill display-4 text-warning"></i><h4 class="mt-3 text-primary">Hospitalidade Nômade</h4><p class="text-muted">Ambiente que reproduz a tradição de receber viajantes.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ========== CONTATO (fundo branco) ========== -->
-  <section id="contato" class="py-5 bg-white">
+  <!-- ========== CONTATO (azul esquerda, vermelho direita – posições opostas) ========== -->
+  <section id="contato" class="py-5" style="background: linear-gradient(to right, #b3cde0 50%, #e8b4b4 50%);">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-4"><h2 class="display-5 fw-bold text-primary">Fale com o Khan</h2><p class="text-secondary">Reservas, eventos ou curiosidades sobre a Mongólia.</p></div>
-          <div class="card border-0 shadow rounded-4 p-4" style="background-color: #f8f9fa;">
+          <div class="card border-0 shadow rounded-4 p-4 bg-white">
             <form>
               <div class="row g-3">
                 <div class="col-md-6"><label for="nome" class="form-label fw-semibold">Nome</label><input type="text" class="form-control border-primary" id="nome" placeholder="Seu nome" required></div>
                 <div class="col-md-6"><label for="email" class="form-label fw-semibold">E-mail</label><input type="email" class="form-control border-primary" id="email" placeholder="nome@exemplo.com" required></div>
                 <div class="col-12"><label for="assunto" class="form-label fw-semibold">Assunto</label><select class="form-select border-primary" id="assunto"><option selected disabled>Escolha uma opção</option><option value="reserva">Reserva de mesa</option><option value="evento">Evento privado</option><option value="sugestao">Sugestão / Elogio</option></select></div>
                 <div class="col-12"><label for="mensagem" class="form-label fw-semibold">Mensagem</label><textarea class="form-control border-primary" id="mensagem" rows="4" placeholder="Conte-nos como podemos ajudar..." required></textarea></div>
-                <div class="col-12 text-center mt-2"><button type="submit" class="btn btn-lg px-5 fw-bold shadow-sm text-white" style="background-color: #722f37;">Enviar Mensagem</button></div>
+                <div class="col-12 text-center mt-2"><button type="submit" class="btn btn-danger btn-lg px-5 fw-bold shadow-sm">Enviar Mensagem</button></div>
               </div>
             </form>
           </div>
@@ -256,15 +294,44 @@
     </div>
   </section>
 
-  <!-- ========== RODAPÉ (azul com vinho) ========== -->
-  <footer class="py-4 text-white" style="background: linear-gradient(90deg, #0d47a1, #722f37);">
+  <!-- ========== RODAPÉ com redes sociais ========== -->
+  <footer class="py-4 text-white" style="background: linear-gradient(to right, #0066B3, #DA2032);">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center mb-3">
         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
           <img src="https://flagcdn.com/w40/mn.png" alt="Bandeira Mongólia" width="32" class="me-2 rounded-1">
-          <span class="fw-bold text-warning">Império Estepes</span> <span class="text-white-50 ms-2">• Desde 2025 •</span>
+          <span class="fw-bold text-warning">Império Estepes</span> 
+          <span class="text-white-50 ms-2">• Desde 2026 •</span>
         </div>
-        <div class="col-md-6 text-center text-md-end"><span class="text-white-50">Culinária da Mongólia com alma nômade.</span><br><small class="text-white-50">Azul • Vinho • Amarelo • Verde • Branco</small></div>
+        <div class="col-md-6 text-center text-md-end">
+          <span class="text-white-50">Culinária da Mongólia com alma nômade.</span>
+        </div>
+      </div>
+      
+      <!-- Redes sociais -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="d-flex justify-content-center gap-3">
+            <a href="https://wa.me/99046417" class="btn btn-success social-btn" target="_blank" title="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="https://facebook.com/" class="btn btn-primary social-btn" target="_blank" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://instagram.com/" class="btn btn-danger social-btn" target="_blank" title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://linkedin.com/" class="btn btn-info social-btn" target="_blank" title="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <small class="text-white-50">Copyright © Felipe Reginatto</small>
+        </div>
       </div>
     </div>
   </footer>
